@@ -33,13 +33,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-::selection {
-  background: var(--orange);
-  color: var(--white);
 }
 
 a {
@@ -124,6 +117,8 @@ a:hover {
   max-width: 1120px;
   margin: 0 auto;
   padding: 40px 24px;
+}
+
 .hero {
   position: relative;
   background: #0d0d10;
@@ -139,13 +134,24 @@ a:hover {
       transparent
     );
   color: var(--white);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
+  padding: 96px 20px 84px;
+  overflow: hidden;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 96px 20px 84px;
-  overflow: hidden;
+  text-align: center;
 }
 
 .hero-logo {
@@ -156,7 +162,7 @@ a:hover {
   border-radius: 28px;
   padding: 12px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
-  margin: 0 0 28px;
+  margin: 0 auto 28px;
   display: block;
 }
 
@@ -177,6 +183,7 @@ a:hover {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
+  text-align: center;
 }
 
 .hero .motto {
@@ -186,13 +193,15 @@ a:hover {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--orange);
+  text-align: center;
 }
 
 .hero-actions {
   margin-top: 34px;
+  width: 100%;
   display: flex;
-  gap: 14px;
   justify-content: center;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -635,12 +644,17 @@ a:hover {
     max-width: 220px;
     margin: 0 auto;
   }
-}
 
-@media (max-width: 720px) {
+  .footer {
+    padding: 40px 18px 0;
+  }
+
   .footer-cols {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-}
+
+  .footer-tag {
+    max-width: none;
+  }
 }
