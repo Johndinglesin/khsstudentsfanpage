@@ -73,12 +73,14 @@ a:hover {
   letter-spacing: 0.2px;
 }
 
-.brand .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--orange);
-  box-shadow: 0 0 0 4px rgba(244, 98, 15, 0.25);
+.brand-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 2px;
+  display: block;
 }
 
 .brand:hover {
